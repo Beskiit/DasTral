@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class StackAndQueue {
-	public static void main(String[]args) {
+	public static void main(String[]args) throws InterruptedException {
 		Scanner sc = new Scanner(System.in);
 		Stack <String> stack = new Stack <String> ();
 		Queue <String> cashier1 = new LinkedList <String> ();
@@ -49,15 +49,15 @@ public class StackAndQueue {
 		}
 		//printing the cashier customer one by one
 		if(cashier1.size() == 4) {
-			System.out.println("Cashier 1 customers: " + cashier1);
+			System.out.println("Cashier 5 customers: " + cashier1);
 			if(cashier2.size() == 4) {
-				System.out.println("Cashier 2 customers: " + cashier2);
+				System.out.println("Cashier 4 customers: " + cashier2);
 				if(cashier3.size() == 4) {
 					System.out.println("Cashier 3 customers: " + cashier3);
 					if(cashier4.size() == 4) {
-						System.out.println("Cashier 4 customers: " + cashier4);
+						System.out.println("Cashier 2 customers: " + cashier4);
 						if(cashier5.size() == 4) {
-							System.out.println("Cashier 5 customers: " + cashier5);
+							System.out.println("Cashier 1 customers: " + cashier5);
 						}
 					}
 				}
@@ -66,35 +66,42 @@ public class StackAndQueue {
 		//removing the queue one by one
 		//cashier1
 		for(int c = 0; c < 4; c++) {
+			Thread.sleep(1000);
 			cashier1.poll();
 			if(cashier1.isEmpty()) {
-				System.out.println("Cashier 1 is done!");
+				System.out.println("Cashier 5 is done!");
 			}
-			System.out.println(cashier1);
+			System.out.println("Cashier 5 customers: " + cashier1);
 			
+			Thread.sleep(1500);
 			cashier2.poll();
 			if(cashier2.isEmpty()) {
-				System.out.println("Cashier 2 is done!");
+				System.out.println("Cashier 4 is done!");
 			}
-			System.out.println(cashier2);
+			System.out.println("Cashier 4 customers: " + cashier2);
 			
+			Thread.sleep(800);
 			cashier3.poll();
 			if(cashier3.isEmpty()) {
 				System.out.println("Cashier 3 is done!");
 			}
-			System.out.println(cashier3);
+			System.out.println("Cashier 3 customers: " + cashier3);
 			
+			
+			Thread.sleep(2000);
 			cashier4.poll();
 			if(cashier4.isEmpty()) {
-				System.out.println("Cashier 4 is done!");
+				System.out.println("Cashier 2 is done!");
 			}
-			System.out.println(cashier4);
+			System.out.println("Cashier 2 customers: " + cashier4);
 			
+			
+			Thread.sleep(2750);
 			cashier5.poll();
 			if(cashier5.isEmpty()) {
-				System.out.println("Cashier 5 is done!");
+				System.out.println("Cashier 1 is done!");
 			}
-			System.out.println(cashier5);
+			System.out.println("Cashier 1 customers: " + cashier5);
 		}
 		System.out.println("All of the cashiers is done! Thank you for using our system!");
 	}
