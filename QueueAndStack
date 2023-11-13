@@ -64,38 +64,37 @@ public class StackAndQueue {
 			}
 		}
 		//removing the queue one by one
-		while(!(cashier1.isEmpty() && cashier2.isEmpty() && cashier3.isEmpty() && cashier4.isEmpty() && cashier5.isEmpty())) {
-			if(choice.equalsIgnoreCase("C1")) {
-				cashier1.poll();
-				System.out.println(cashier1);
-				if(cashier1.isEmpty()) {
-					System.out.println("Cashier 1 is done!");
-				}
-			}else if(choice.equalsIgnoreCase("C2")) {
-				cashier2.poll();
-				System.out.println(cashier2);
-				if(cashier2.isEmpty()) {
-					System.out.println("Cashier 2 is done!");
-				}
-			}else if(choice.equalsIgnoreCase("C3")) {
-				cashier3.poll();
-				System.out.println(cashier3);
-				if(cashier3.isEmpty()) {
-					System.out.println("Cashier 3 is done!");
-				}
-			}else if(choice.equalsIgnoreCase("C4")) {
-				cashier4.poll();
-				System.out.println(cashier4);
-				if(cashier4.isEmpty()) {
-					System.out.println("Cashier 4 is done!");
-				}
-			}else if(choice.equalsIgnoreCase("C5")) {
-				cashier5.poll();
-				System.out.println(cashier5);
-				if(cashier5.isEmpty()) {
-					System.out.println("Cashier 5 is done!");
-				}
+		//cashier1
+		for(int c = 0; c < 4; c++) {
+			cashier1.poll();
+			if(cashier1.isEmpty()) {
+				System.out.println("Cashier 1 is done!");
 			}
+			System.out.println(cashier1);
+			
+			cashier2.poll();
+			if(cashier2.isEmpty()) {
+				System.out.println("Cashier 2 is done!");
+			}
+			System.out.println(cashier2);
+			
+			cashier3.poll();
+			if(cashier3.isEmpty()) {
+				System.out.println("Cashier 3 is done!");
+			}
+			System.out.println(cashier3);
+			
+			cashier4.poll();
+			if(cashier4.isEmpty()) {
+				System.out.println("Cashier 4 is done!");
+			}
+			System.out.println(cashier4);
+			
+			cashier5.poll();
+			if(cashier5.isEmpty()) {
+				System.out.println("Cashier 5 is done!");
+			}
+			System.out.println(cashier5);
 		}
 		System.out.println("All of the cashiers is done! Thank you for using our system!");
 	}
