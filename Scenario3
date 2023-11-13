@@ -31,6 +31,32 @@ public class Scanario {
 				
 				//deciding which cashier will the customer go
 				int tempRandNum = rnd.nextInt(0, 5);
+				if(counter5 == 4) {
+					tempRandNum = rnd.nextInt(0,5);
+					if(tempRandNum == 0) {
+						tempRandNum = 1;
+					}
+				}else if(counter4 == 4) {
+					tempRandNum = rnd.nextInt(0,5);
+					if(tempRandNum == 1) {
+						tempRandNum = 2;
+					}
+				}else if(counter3 == 4) {
+					tempRandNum = rnd.nextInt(0,5);
+					if(tempRandNum == 2) {
+						tempRandNum = 3;
+					}
+				}else if(counter2 == 4) {
+					tempRandNum = rnd.nextInt(0,5);
+					if(tempRandNum == 3) {
+						tempRandNum = 4;
+					}
+				}else if(counter1 == 4) {
+					tempRandNum = rnd.nextInt(0,5);
+					if(tempRandNum == 4) {
+						tempRandNum = 0;
+					}
+				}
 				if(tempRandNum == 0) {
 					while(counter5 != 4){
 						cashier5.offer(stack.pop());
