@@ -1,0 +1,102 @@
+package package1;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class StackAndQueue {
+	public static void main(String[]args) {
+		Scanner sc = new Scanner(System.in);
+		Stack <String> stack = new Stack <String> ();
+		Queue <String> cashier1 = new LinkedList <String> ();
+		Queue <String> cashier2 = new LinkedList <String> ();
+		Queue <String> cashier3 = new LinkedList <String> ();
+		Queue <String> cashier4 = new LinkedList <String> ();
+		Queue <String> cashier5 = new LinkedList <String> ();
+		
+		System.out.print("Enter a 20 number of customers: ");
+		// input of 20 customers
+		while(true) {
+			String customer = sc.next();
+			stack.push("Customer - " + customer);
+			
+			if(stack.size() == 20) {
+				System.out.println(stack);
+				break;
+			}
+		}
+		//cashier1
+		for(int i = 0; i < 4; i++) {
+			cashier1.offer(stack.pop());
+		}
+		
+		//cashier2
+		for(int i = 0; i < 4; i++) {
+			cashier2.offer(stack.pop());
+		}	
+		//cashier3
+		for(int i = 0; i < 4; i++) {
+			cashier3.offer(stack.pop());
+		}
+		//cashier4
+		for(int i = 0; i < 4; i++) {
+			cashier4.offer(stack.pop());
+		}
+		//cashier5
+		for(int i = 0; i < 4; i++) {
+			cashier5.offer(stack.pop());
+		}
+		//printing the cashier customer one by one
+		if(cashier1.size() == 4) {
+			System.out.println("Cashier 1 customers: " + cashier1);
+			if(cashier2.size() == 4) {
+				System.out.println("Cashier 2 customers: " + cashier2);
+				if(cashier3.size() == 4) {
+					System.out.println("Cashier 3 customers: " + cashier3);
+					if(cashier4.size() == 4) {
+						System.out.println("Cashier 4 customers: " + cashier4);
+						if(cashier5.size() == 4) {
+							System.out.println("Cashier 5 customers: " + cashier5);
+						}
+					}
+				}
+			}
+		}
+		//removing the queue one by one
+		while(!(cashier1.isEmpty() && cashier2.isEmpty() && cashier3.isEmpty() && cashier4.isEmpty() && cashier5.isEmpty())) {
+			if(choice.equalsIgnoreCase("C1")) {
+				cashier1.poll();
+				System.out.println(cashier1);
+				if(cashier1.isEmpty()) {
+					System.out.println("Cashier 1 is done!");
+				}
+			}else if(choice.equalsIgnoreCase("C2")) {
+				cashier2.poll();
+				System.out.println(cashier2);
+				if(cashier2.isEmpty()) {
+					System.out.println("Cashier 2 is done!");
+				}
+			}else if(choice.equalsIgnoreCase("C3")) {
+				cashier3.poll();
+				System.out.println(cashier3);
+				if(cashier3.isEmpty()) {
+					System.out.println("Cashier 3 is done!");
+				}
+			}else if(choice.equalsIgnoreCase("C4")) {
+				cashier4.poll();
+				System.out.println(cashier4);
+				if(cashier4.isEmpty()) {
+					System.out.println("Cashier 4 is done!");
+				}
+			}else if(choice.equalsIgnoreCase("C5")) {
+				cashier5.poll();
+				System.out.println(cashier5);
+				if(cashier5.isEmpty()) {
+					System.out.println("Cashier 5 is done!");
+				}
+			}
+		}
+		System.out.println("All of the cashiers is done! Thank you for using our system!");
+	}
+}
