@@ -1,3 +1,5 @@
+package DasTral;
+
 import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -36,14 +38,17 @@ public class Scanario {
 						counter5++;
 						break;
 					}
+					tempRandNum = 1;
+					System.out.println(counter5);
 				}else if(tempRandNum == 1) {
 					while(counter4 != 4){
 						cashier4.offer(stack.pop());
 						System.out.println("Cashier 2 customers: " + cashier4);
 						counter4++;
-						System.out.println(counter4);
 						break;
 						}
+					tempRandNum = 2;
+					System.out.println(counter4);
 				}else if(tempRandNum == 2) {
 					while(counter3 != 4){
 						cashier3.offer(stack.pop());
@@ -51,6 +56,8 @@ public class Scanario {
 						counter3++;
 						break;
 						}
+					tempRandNum = 3;
+					System.out.println(counter3);
 				}else if(tempRandNum == 3) {
 					while(counter2 != 4){
 						cashier2.offer(stack.pop());
@@ -58,6 +65,8 @@ public class Scanario {
 						counter2++;
 						break;
 						}
+					tempRandNum = 4;
+					System.out.println(counter2);
 				}else if(tempRandNum == 4) {
 					while(counter1 != 4){
 						cashier1.offer(stack.pop());
@@ -65,6 +74,8 @@ public class Scanario {
 						counter1++;
 						break;
 						}
+					tempRandNum = 0;
+					System.out.println(counter1);
 				}
 				if((counter1 == 4) && (counter2 == 4) && (counter3 == 4) && (counter4 == 4) && (counter5 == 4)) {
 					System.out.println("The cashier is full!");
